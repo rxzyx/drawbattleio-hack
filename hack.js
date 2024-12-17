@@ -26,15 +26,23 @@
         setTimeout(function() {
             const innerDiv = document.createElement('div');
             const parentDiv = document.querySelector('div[class*="paneHeader"]');
-            innerDiv.className = reactedWordDashes
-            innerDiv.setAttribute('bis_skin_checked', '1');
-            innerDiv.textContent = textContent
-            parentDiv.appendChild(innerDiv)
+            if (parentDiv) {
+                if (innerDiv) {
+                    innerDiv.textContent = textContent
+                } else {
+                    innerDiv.className = reactedWordDashes
+                    innerDiv.setAttribute('bis_skin_checked', '1');
+                    innerDiv.textContent = textContent
+                    parentDiv.appendChild(innerDiv)
+                }
+            } else {
+                alert(textContent)
+            }
         }, wait)
     }
 
     const OriginalWebsocket = window.WebSocket
-    const NewWebsocket = function() {
+    const ProxiedWebSocket = function() {
         const ws = new OriginalWebsocket(...arguments)
         window.websocket = ws;
         ws.addEventListener("message", function (e) {
@@ -63,7 +71,6 @@
                     case 16:
                         if (ps.length == 4) {
                             // if (ps[3].drawerId == sessionStorage.getItem('userId')) {
-                            console.log(my_team)
                             if (my_team && my_team.includes(ps[3].drawerId)) {
                                 showdown_info.index = ps[1]
                                 showdown_info.team = ps[2]
@@ -108,6 +115,12 @@
                                     wordlist: game_info.finalRound.words
                                 }
                                 setText(`${showdown_info.wordlist[showdown_info.index]}`)
+                            } else if (game_info.currentRound) {
+                                if (game_info.currentRound.word) {
+                                    setText(`${game_info.currentRound.word}`)
+                                } else {
+                                    setText(`Choices: ${game_info.currentRound.wordChoices[0]}`)
+                                }
                             }
                         }
                         break;
@@ -119,5 +132,5 @@
         })
         return ws;
     };
-    window.WebSocket = NewWebsocket;
+    window.WebSocket = ProxiedWebSocket;
 })();
