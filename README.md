@@ -9,9 +9,10 @@
 - **Remove Name Length Limit**
 - **Get All Answers, including both normal rounds and showdown rounds**
 - **Create Games**
-- **Spam Bots** *(beta, under development)*
-- **Send Messages as Player** *(beta, under development)*
-- **Python mini user-console** *(needs more work)*
+- **Spam Bots**
+- **Send Messages as Player**
+- **Force Start Next Round**
+- **Python mini user-console**
 - **Open Source!**
 
 ## 🤖 Features with Problems (will be fixed soon):
@@ -24,11 +25,12 @@
 
 ### JavaScript
 - For the User Script (on the browser), download TamperMonkey and just paste the contents of hack.js into an empty UserScript file and then just play the game!
+- If the user does not choose a word, then the answer will *always* be the first choice.
 
 ### Python
 - For the Python mini-console (which needs more work to be done), just run the Python file and do what it says.
 - You will need minimum Python 3.10
-- It's not yet finished! Still a lot of work to do... will really appreciate some pull requests, from style to logic.
+- Will really appreciate some pull requests, from style to logic.
 - You will need to install aioconsole by using pip for best console usage!
 - If you want to make another template function (feel free to make a pull request, for anything!), make sure its name ends with "_template"!
 
