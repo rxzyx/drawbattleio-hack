@@ -28,8 +28,8 @@ HEADERS: dict = {
 API: str = "https://api.drawbattle.io/"
 WSS_URI: str = "wss://ws.drawbattle.io/ws/?gameId={0}&userId={1}&userName={2}"
 
-LOWERCASE_ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyz"
-INCLUDE_VALUES = ["all", "guesses"]
+LOWERCASE_ALPHABET: str = "0123456789abcdefghijklmnopqrstuvwxyz"
+INCLUDE_VALUES: list = ["all", "guesses"]
 NAME_IDENTIFIER_ON: bool = True
 CNAME_IDENTIFIER: str = "{create}:" # create name identifier
 CURRENT_GAME: Optional[str] = None
@@ -53,8 +53,8 @@ current_info: dict = {
     "word": ""
 }
 game_info: dict = {}
-template_funcs = None
-HELP_PAGE = '''
+template_funcs: Optional[list] = None
+HELP_PAGE: str = '''
 *Commands*
 
 send_guess('guesshere') -> Sends a guess as the current user.
