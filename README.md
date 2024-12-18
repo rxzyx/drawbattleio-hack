@@ -17,7 +17,7 @@
 
 ## 🤖 Features with Problems (will be fixed soon):
 
-- None (that are known, at least), report to Issues if you find more issues!
+- None (that are known, at least), report to Issues if you find any issues!
 
 #### I am not responsible for your actions with these cheats.
 
@@ -31,7 +31,7 @@
 - For the Python mini-console (which needs more work to be done), just run the Python file and do what it says.
 - You will need minimum Python 3.10
 - Will really appreciate some pull requests, from style to logic.
-- You will need to install aioconsole by using pip for best console usage!
+- You will need all the modules in requirements.txt! To install them, simply run `pip install -r requirements.txt` in your command prompt / terminal.
 - If you want to make another template function (feel free to make a pull request, for anything!), make sure its name ends with "_template"!
 
 <h3 align="left">Made With Python and JavaScript</h3>
