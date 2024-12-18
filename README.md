@@ -17,7 +17,7 @@
 
 ## 🤖 Features with Problems (will be fixed soon):
 
-- Sending messages, report to Issues if you find more issues!
+- None (that are known, at least), report to Issues if you find more issues!
 
 #### I am not responsible for your actions with these cheats.
 
